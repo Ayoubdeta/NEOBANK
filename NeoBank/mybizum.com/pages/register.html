@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro</title>
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" 
+    rel="stylesheet">
+  <!-- Estilos globales -->
+  <link rel="stylesheet" href="../css/styles1.css">
+  <!-- Estilos de registro -->
+  <link rel="stylesheet" href="../css/registrar.css">
+  <!-- JS dinámicos -->
+  <script src="../js/clsAjax.js" defer></script>
+  <script src="../js/rg.js" defer></script>
+  <script src="../js/pwdcheck.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar container">
+      <a href="../index.html" class="btn btn-secondary">← Volver</a>
+    </nav>
+  </header>
+
+  <main class="register-page container">
+    <div class="register-card glass">
+      <div class="register-header">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjWfkc3d-JLlI5GNfEJcRYVMJ_MS3f8rk5rQ&s"
+             alt="Logo" class="register-logo">
+        <h1>Crear Cuenta</h1>
+      </div>
+      <form id="registerForm" class="register-form" method="GET">
+        <input name="action" value="register" hidden>
+
+        <label for="username">Usuario</label>
+        <div class="form-group">
+            <input type="text" id="username" name="username" required placeholder="Tu usuario">
+        </div>
+
+        <label for="name">Nombre</label>
+        <div class="form-group">
+            <input type="text" id="name" name="name" required placeholder="Tu nombre">
+        </div>
+
+        <label for="lastname">Apellido</label>
+        <div class="form-group">
+            <input type="text" id="lastname" name="lastname" required placeholder="Tu apellido">
+        </div>
+        <label for="password">Contraseña</label>
+
+        <div class="form-group">
+        <input type="password" id="password" name="password" required 
+               placeholder="Crea una contraseña"
+               onkeyup="checkPasswordStrength()">
+        </div>
+        <div id="passwordStrengthResult" class="pwd-result"></div>
+
+        <label for="email">Correo electrónico</label>
+
+        <div class="form-group">
+            <input type="email" id="email" name="email" required placeholder="tucorreo@ejemplo.com">
+        </div>
+        <label for="gender">Género</label>
+        <div class="form-group">
+        <select name="gender" id="gender" required>
+          <option value="" disabled selected>Selecciona...</option>
+          <option value="Hombre">Hombre</option>
+          <option value="Mujer">Mujer</option>
+          <option value="Otro">Otro</option>
+        </select>
+        </div>
+
+        <label for="def_lang">Idioma</label>
+        <div class="form-group">
+        <select name="def_lang" id="def_lang" required>
+          <option value="" disabled selected>Selecciona...</option>
+          <option value="es">Español</option>
+          <option value="en">Inglés</option>
+          <option value="fr">Francés</option>
+        </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Registrar</button>
+      </form>
+    </div>
+  </main>
+
+</body>
+</html>

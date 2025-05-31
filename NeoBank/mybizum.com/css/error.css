@@ -1,0 +1,109 @@
+:root {
+    --color-bg: #fff0f0;
+    --color-text: #b30000;
+    --color-border: #ff1a1a;
+    --color-shadow: #ff4d4d;
+    --color-accent: #ff0000;
+    --color-btn-bg: #b30000;
+    --color-btn-text: #ffffff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: var(--color-bg);
+    font-family: 'Segoe UI', sans-serif;
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px var(--color-shadow);
+    animation: pulse 2s infinite;
+}
+
+#errorMessage {
+    font-size: 1.5rem;
+    padding: 20px;
+    border: 3px solid var(--color-border);
+    background-color: #fff;
+    border-radius: 12px;
+    max-width: 600px;
+    box-shadow: 0 0 15px var(--color-shadow);
+    animation: shake 0.5s, pulse 2s infinite alternate;
+}
+
+a {
+    margin-top: 30px;
+    text-decoration: none;
+    padding: 12px 24px;
+    background-color: var(--color-btn-bg);
+    color: var(--color-btn-text);
+    border-radius: 8px;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #800000;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    60% { transform: translateX(-10px); }
+    80% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
+
+/* Modo oscuro */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-bg: #2b0000;
+        --color-text: #ffcccc;
+        --color-border: #ff6666;
+        --color-shadow: #ff1a1a;
+        --color-accent: #ff3333;
+        --color-btn-bg: #800000;
+        --color-btn-text: #ffffff;
+    }
+
+    body {
+        background-color: var(--color-bg);
+    }
+
+    #errorMessage {
+        background-color: #400000;
+        color: var(--color-text);
+    }
+
+    a {
+        background-color: var(--color-btn-bg);
+        color: var(--color-btn-text);
+    }
+
+    a:hover {
+        background-color: #a10000;
+    }
+}

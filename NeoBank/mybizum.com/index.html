@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco Ayoub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" 
+      rel="stylesheet">
+    <link rel="stylesheet" href="css/styles1.css">
+    
+    <link rel="stylesheet" href="css/styles1.css">
+</head>
+<body>
+
+    <!-- Header con navegación -->
+    <header>
+        <nav class="navbar">
+            <a href="pages/login.html" class="btn btn-primary">Iniciar Sesión</a>
+            <a href="pages/register.html" class="btn btn-secondary">Registrarse</a>
+        </nav>
+    </header>
+
+    <!-- Sección Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Banco A²</h1>
+            <p>Tu futuro financiero comienza hoy. Ahorrar nunca fue tan fácil.</p>
+            <a href="pages/register.html" class="btn btn-primary">Comienza Ahora</a>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios -->
+    <section class="services">
+        <h2>Nuestros Servicios</h2>
+        <div class="service-list">
+            <div class="service-card">
+                <h3>Transferencias Rápidas</h3>
+                <p>Envía dinero en segundos, sin comisiones.</p>
+            </div>
+            <div class="service-card">
+                <h3>Ahorros Inteligentes</h3>
+                <p>Crece tu dinero con nuestros planes flexibles.</p>
+            </div>
+            <div class="service-card">
+                <h3>Atención 24/7</h3>
+                <p>Un equipo siempre disponible para ayudarte.</p>
+            </div>
+            <div class="service-card">
+                <h3>Pagos Internacionales</h3>
+                <p>Haz pagos globales con la mejor seguridad.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Video Musical -->
+    <section class="video">
+        <h2>Disfruta de nuestra playlist</h2>
+        <p>Escucha música mientras gestionas tu cuenta bancaria con nosotros.</p>
+        <iframe src="https://www.youtube.com/embed/oRdxUFDoQe0?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+
+    <!-- Noticias -->
+    <section class="news">
+        <h2>Últimas Noticias</h2>
+        <div class="news-item">
+            <h3>¡Promoción de Bienvenida!</h3>
+            <p>Recibe un bono de 50€ al abrir tu cuenta antes del 31 de mayo.</p>
+        </div>
+        <div class="news-item">
+            <h3>Bizum Más Rápido</h3>
+            <p>Las transferencias Bizum ahora se realizan en menos de 5 segundos. ¡Pruébalo ya!</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Banco A². Todos los derechos reservados.</p>
+        <p>Contacto: ayoubajtirah@gmail.com</p>
+    </footer>
+
+    <script>
+        // Código de interactividad (por ejemplo, saludo dinámico)
+        document.addEventListener("DOMContentLoaded", function () {
+            const welcomeMessage = document.querySelector(".hero-content p");
+            const currentDate = new Date();
+            const hour = currentDate.getHours();
+
+            if (hour >= 0 && hour < 12) {
+                welcomeMessage.textContent = "¡Buenos días! Empezamos un día nuevo para tu futuro financiero.";
+            } else if (hour >= 12 && hour < 18) {
+                welcomeMessage.textContent = "¡Buenas tardes! Aprovecha nuestro servicio para crecer tu dinero.";
+            } else {
+                welcomeMessage.textContent = "¡Buenas noches! Revisa tus finanzas antes de dormir.";
+            }
+        });
+    </script>
+
+</body>
+</html>

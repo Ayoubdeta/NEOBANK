@@ -1,0 +1,119 @@
+:root {
+    --primary: #00c18e;
+    --primary-dark: #009a75;
+    --background: linear-gradient(135deg, #00c18e 0%, #ffffff 100%);
+    --white: #fff;
+    --text: #1e1e1e;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--background);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 520px;
+    background: var(--white);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .header {
+    margin-bottom: 2rem;
+  }
+  
+  .icon {
+    width: 80px;
+    margin-bottom: 1rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+  }
+  
+  .form-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .form-group label {
+    font-size: 1.1rem;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    text-align: left;
+    display: block;
+  }
+  
+  .form-group input {
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    width: 100%;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus {
+    border-color: var(--primary);
+    outline: none;
+  }
+  
+  .strength-result {
+    font-size: 0.9rem;
+    color: #888;
+    text-align: left;
+    margin-top: 0.3rem;
+  }
+  
+  .btn-change {
+    background-color: var(--primary);
+    color: white;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-change:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  /* Botón de volver */
+  .back-button {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    text-decoration: none;
+    background-color: white;
+    color: var(--primary);
+    padding: 0.7rem 1.2rem;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: var(--primary);
+    color: white;
+  }
+  

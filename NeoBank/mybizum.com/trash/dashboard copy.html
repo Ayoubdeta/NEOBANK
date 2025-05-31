@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Bizum</title>
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <h1>Bienvenido al Dashboard</h1>
+
+  <div id="successMessage" style="margin-bottom: 1em; font-weight: bold;"></div>
+  <div id="serverInfo"></div>
+
+  <button id="logout" type="button">Cerrar sesión</button>
+
+  <!-- Enlace a la nueva página de enviar dinero -->
+  <h2><a href="send.html">Enviar dinero (Bizum)</a></h2>
+
+  <h2>Consultar saldo</h2>
+  <button data-action="check_balance">Consultar dinero</button>
+
+
+
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const xml = sessionStorage.getItem("responseXML");
+
+      if (xml) {
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xml, "text/xml");
+        const numError = xmlDoc.querySelector("num_error")?.textContent;
+        const userMessage = xmlDoc.querySelector("user_message")?.textContent || "Sesión iniciada correctamente.";
+
+        if (numError === "0") {
+          document.getElementById("successMessage").innerText = "✅ " + userMessage;
+        }
+      }
+    });
+  </script>
+</body>
+</html>

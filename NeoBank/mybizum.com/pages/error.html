@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+    <link rel="stylesheet" href="../css/error.css">
+</head>
+<body>
+    <h1>🚨Ocurrió un ERROR🚨</h1>
+    <div id="errorMessage"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const xmlData = sessionStorage.getItem('responseXML');
+
+            if (xmlData) {
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xmlData, "text/xml");
+                const msg = xmlDoc.querySelector("user_message")?.textContent || "Error desconocido.";
+                document.getElementById("errorMessage").innerText = "❌ " + msg;
+            } else {
+                document.getElementById("errorMessage").innerText = "❌ No hay información de error disponible.";
+            }
+        });
+    </script>
+
+    <a href="../index.html" class="btn btn-primary">Volver al Inicio</a>
+</body>
+</html>

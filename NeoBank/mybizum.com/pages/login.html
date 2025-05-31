@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión</title>
+  <!-- Font y CSS principal -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" 
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles1.css">
+  <!-- CSS específico de login -->
+  <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar container">
+      <a href="../index.html" class="btn btn-secondary">← Volver</a>
+    </nav>
+  </header>
+
+  <main class="login-page container">
+    <div class="login-card glass">
+      <div class="login-header">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjWfkc3d-JLlI5GNfEJcRYVMJ_MS3f8rk5rQ&s" 
+             alt="Logo" class="login-logo">
+        <h1>Iniciar Sesión</h1>
+      </div>
+      <form id="loginForm" class="login-form">
+        <input name="action" value="login" hidden>
+
+        <label for="login_username">Usuario</label>
+        <input type="text" id="login_username" name="username" required 
+               placeholder="Tu usuario" value="ayoub">
+
+        <label for="login_password">Contraseña</label>
+        <input type="password" id="login_password" name="password" required 
+               placeholder="Tu contraseña" value='Ayoub123**!"!2A'>
+
+        <!-- <a href="recover.html" class="forgot-link">¿Olvidaste tu contraseña?</a> -->
+
+        <button type="submit" class="btn btn-primary">Entrar</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="../js/clsAjax.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

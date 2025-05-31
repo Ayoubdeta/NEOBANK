@@ -1,0 +1,78 @@
+/* Estilo General */
+body {
+    font-family: Arial, sans-serif;
+    /*background: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWM4MXM2c241M3VkZXJnOHR1NHg0Y2k1NXRyZXdvNmM1dzVwOG4zZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/67ThRZlYBvibtdF9JH/giphy.gif') no-repeat center center fixed;
+    */
+    background-color: #333;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+    color: #0056b3;
+    margin-bottom: 5px;
+    font-size: 14px;
+    display: block;
+    margin-left: 5px;
+}
+
+input {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    font-size: 16px;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+.cardNombre {
+    background: rgba(255, 255, 255, 0.7); 
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    width: 800px;
+    backdrop-filter: blur(5px);
+    margin-bottom: 50px;
+    text-align: center;
+}

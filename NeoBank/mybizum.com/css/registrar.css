@@ -1,0 +1,173 @@
+/* register.css */
+
+/* Importar tipografía moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  /* Colores */
+  --clr-bg: #f5f7fa;
+  --clr-card-bg: rgba(255, 255, 255, 0.85);
+  --clr-primary: #4caf50;
+  --clr-primary-dark: #388e3c;
+  --clr-text: #2e3a46;
+  --clr-text-light: #6b7b8c;
+  --clr-placeholder: #a0aebf;
+  --radius: 12px;
+  --gap: 1rem;
+  --transition: 0.3s ease;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  --font: 'Poppins', sans-serif;
+}
+
+/* Reset básico */
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font);
+  background: var(--clr-bg);
+  color: var(--clr-text);
+  min-height: 100vh;
+}
+
+/* Contenedor centrado */
+.register-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+/* Tarjeta */
+.register-card {
+  background: var(--clr-card-bg);
+  backdrop-filter: blur(10px);
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 420px;
+  animation: fadeInUp 0.6s var(--transition) both;
+}
+
+/* Encabezado */
+.register-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.register-logo {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 0.75rem;
+  animation: rotateLogo 4s linear infinite;
+}
+.register-header h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--clr-text);
+}
+
+/* Formulario */
+.register-form {
+  display: grid;
+  row-gap: var(--gap);
+}
+
+/* Campo con label flotante */
+.form-group {
+  position: relative;
+  margin-top: var(--gap);
+}
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem 0.5rem;
+  border: none;
+  border-bottom: 2px solid var(--clr-placeholder);
+  background: transparent;
+  font-size: 1rem;
+  color: var(--clr-text);
+  transition: border-color var(--transition);
+}
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-bottom-color: var(--clr-primary);
+}
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: var(--clr-placeholder);
+  pointer-events: none;
+  transition: transform var(--transition), font-size var(--transition), color var(--transition);
+}
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group select:focus + label,
+.form-group select:not([value=""]) + label {
+  top: 0;
+  transform: translateY(-100%);
+  font-size: 0.8rem;
+  color: var(--clr-primary);
+}
+
+/* Contraseña: resultado fuerza */
+.pwd-result {
+  font-size: 0.9rem;
+  color: var(--clr-text-light);
+  margin-top: 0.25rem;
+}
+
+/* Enlace “Olvidé contraseña” */
+.forgot-link {
+  font-size: 0.9rem;
+  color: var(--clr-primary);
+  text-decoration: none;
+  transition: color var(--transition);
+  margin-top: 0.25rem;
+  display: inline-block;
+}
+.forgot-link:hover {
+  color: var(--clr-primary-dark);
+}
+
+/* Botón */
+.btn-primary {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.8rem;
+  background: var(--clr-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.btn-primary:hover {
+  background: var(--clr-primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes rotateLogo {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .register-card {
+    padding: 2rem 1rem;
+  }
+}

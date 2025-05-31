@@ -1,0 +1,277 @@
+/* styles1.css */
+
+/*======================================
+  Import Google Font
+======================================*/
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap');
+
+/*======================================
+  CSS Variables
+======================================*/
+:root {
+  --clr-bg: #f0f4f8;
+  --clr-hero-start: #4caf50;
+  --clr-hero-end: #2e7d32;
+  --clr-surface: rgba(255,255,255,0.8);
+  --clr-text: #1a202c;
+  --clr-text-light: #4a5568;
+  --clr-primary: #4caf50;
+  --clr-primary-dark: #388e3c;
+  --clr-accent: #81c784;
+  --radius: 16px;
+  --gap: 1.5rem;
+  --transition: 0.4s ease;
+  --shadow: 0 4px 20px rgba(0,0,0,0.1);
+  --font: 'Poppins', sans-serif;
+}
+
+/*======================================
+  Reset & Base
+======================================*/
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font);
+  background: var(--clr-bg);
+  color: var(--clr-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/*======================================
+  Utility Classes
+======================================*/
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--gap) 0;
+}
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.btn-primary {
+  background: var(--clr-primary);
+}
+.btn-secondary {
+  background: var(--clr-accent);
+}
+.btn-primary:hover {
+  background: var(--clr-primary-dark);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+.btn-secondary:hover {
+  background: #69c17a;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+/*======================================
+  Header / Nav
+======================================*/
+header {
+  position: fixed;
+  top: 0; width: 100%;
+  background: var(--clr-surface);
+  backdrop-filter: blur(8px);
+  box-shadow: var(--shadow);
+  z-index: 100;
+  animation: slideDown 0.6s ease both;
+}
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--gap);
+  padding: var(--gap);
+}
+
+/*======================================
+  Hero Section
+======================================*/
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, var(--clr-hero-start), var(--clr-hero-end));
+  clip-path: polygon(0 0,100% 0,100% 85%,0 100%);
+  padding: var(--gap) 0;
+}
+.hero-content {
+  max-width: 600px;
+  color: #fff;
+  animation: fadeInUp 1s ease both;
+}
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: var(--gap);
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: var(--gap);
+  color: rgba(255,255,255,0.9);
+}
+.hero .btn {
+  animation: pulse 1.5s infinite;
+}
+
+/*======================================
+  Services
+======================================*/
+.services {
+  background: var(--clr-surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: var(--gap) var(--gap);
+  margin-top: -5%;
+  transform: translateY(-5%);
+  animation: fadeIn 1s ease both;
+}
+.services h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: var(--gap);
+  position: relative;
+}
+.services h2::after {
+  content: '';
+  width: 60px; height: 4px;
+  background: var(--clr-primary);
+  position: absolute;
+  left: 50%; transform: translateX(-50%);
+  bottom: -8px;
+}
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: var(--gap);
+}
+.service-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: var(--gap);
+  box-shadow: var(--shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+.service-card h3 {
+  color: var(--clr-primary);
+  margin-bottom: .5rem;
+}
+.service-card p {
+  color: var(--clr-text-light);
+}
+
+/*======================================
+  Video Section
+======================================*/
+.video {
+  text-align: center;
+  margin: var(--gap) 0;
+  animation: fadeIn 1s ease .3s both;
+}
+.video h2 {
+  font-size: 2rem;
+  margin-bottom: .5rem;
+}
+.video p {
+  margin-bottom: var(--gap);
+  color: var(--clr-text-light);
+}
+.video iframe {
+  width: 100%; max-width: 800px; height: 450px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/*======================================
+  News Section
+======================================*/
+.news {
+  padding: var(--gap) 0;
+}
+.news h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: var(--gap);
+}
+.news-item {
+  background: var(--clr-surface);
+  border-radius: var(--radius);
+  padding: var(--gap);
+  box-shadow: var(--shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+  margin-bottom: var(--gap);
+}
+.news-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+.news-item h3 {
+  margin-bottom: .5rem;
+  color: var(--clr-primary);
+}
+.news-item p {
+  color: var(--clr-text-light);
+}
+
+/*======================================
+  Footer
+======================================*/
+footer {
+  background: var(--clr-primary-dark);
+  color: #fff;
+  text-align: center;
+  padding: var(--gap) 0;
+  animation: fadeIn 1s ease .5s both;
+}
+footer p {
+  margin-bottom: .5rem;
+}
+
+/*======================================
+  Keyframe Animations
+======================================*/
+@keyframes slideDown {
+  from { transform: translateY(-100px); opacity: 0; }
+  to   { transform: translateY(0);     opacity: 1; }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes pulse {
+  0%,100% { transform: scale(1); }
+  50%     { transform: scale(1.05); }
+}
+
+/*======================================
+  Responsive
+======================================*/
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.5rem; }
+  .hero p { font-size: 1rem; }
+  .video iframe { height: 250px; }
+  .service-list { grid-template-columns: 1fr; }
+  .news-item { margin-bottom: var(--gap); }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Contraseña</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/main.js" defer></script>
+</head>
+<body>
+    <div class="cardNombre">
+        <a href="../index.html">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjWfkc3d-JLlI5GNfEJcRYVMJ_MS3f8rk5rQ&s" alt="Iniciar sesión" width="100" height="100" align="left">
+        </a>
+        <h1 class="centrar">Recuperar Contraseña</h1>
+    </div>
+
+    <div class="cardNombre form-container">
+        <img src="https://img.icons8.com/ios/452/key.png" alt="Cambiar Contraseña" class="form-icon" alt="Iniciar sesión" width="150" height="150" align="right">
+        <form action="../../ws.mybizum.com/com/ws.php" method="GET">
+            <label for="change_username">Nombre de usuario:</label>
+            <input type="text" id="change_username" name="username" required>
+
+            <label for="old_password">Contraseña Actual:</label>
+            <input type="password" id="old_password" name="password" required>
+
+            <label for="new_password">Nueva Contraseña:</label>
+            <!--<input type="password" id="new_password" name="newpassword" required>-->
+            <input type="password" id="new_password" name="new_password" required onkeyup="checkPasswordStrength()"><br><br>
+            <div id="passwordStrengthResult"></div><br>
+
+            <button type="submit" name="action" value="changepass">Cambiar Contraseña</button>
+        </form>
+    </div>
+
+    <hr>
+</body>
+</html>

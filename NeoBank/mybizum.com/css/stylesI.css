@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+:root {
+  --green: #00a86b;
+  --green-dark: #007f52;
+  --bg: #f4fef8;
+  --white: #fff;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  --radius: 16px;
+  --font: 'Inter', sans-serif;
+  --text-dark: #1a1a1a;
+  --text-light: #666;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text-dark);
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+/* Logout */
+.logout-btn {
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+  background-color: var(--green);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.7rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: 0.3s ease;
+}
+.logout-btn:hover {
+  background-color: var(--green-dark);
+}
+
+/* Layout */
+.dashboard {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+}
+
+/* Header */
+.dashboard-header {
+  text-align: center;
+}
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  color: var(--green);
+}
+.dashboard-header .subtext {
+  font-size: 1rem;
+  color: var(--text-light);
+}
+
+/* Card style */
+.card {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-4px);
+}
+.card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: var(--green-dark);
+}
+
+/* Balance style */
+.balance {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--green);
+  margin-top: 0.5rem;
+}
+.balance-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.balance-text {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+.balance-amount {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #00c18e; /* Color diferente para destacar la cifra */
+}
+
+/* Link style */
+.btn-link {
+  display: inline-block;
+  background-color: var(--green);
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn-link:hover {
+  background-color: var(--green-dark);
+}
+
+/* Message style */
+.message {
+  background: #e9fdf4;
+  border-left: 4px solid var(--green);
+  padding: 1rem;
+  border-radius: var(--radius);
+  color: var(--text-dark);
+}
+
+/* Última transacción */
+.last-transaction-card {
+  position: fixed;
+  top: 5rem;
+  right: 2rem;
+  width: 300px;
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: left;
+  z-index: 10;
+}
+
+.last-transaction-card h2 {
+  font-size: 1.2rem;
+  color: var(--green-dark);
+  margin-bottom: 1rem;
+}
+
+#lastTransactionContent p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+}

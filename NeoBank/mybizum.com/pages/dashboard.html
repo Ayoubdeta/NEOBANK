@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard | Banco A²</title>
+  <link rel="stylesheet" href="../css/stylesI.css" />
+  <script src="../js/main.js" defer></script>
+  <script src="../js/balance.js" defer></script>
+  <script src="../js/clsAjax.js" defer></script>
+  <script src="../js/lastTransaction.js" defer></script>
+</head>
+<body>
+  <!-- Botón de logout -->
+  <button id="logout" class="logout-btn">Cerrar sesión</button>
+
+  <!-- Contenedor principal -->
+  <div class="dashboard">
+    <header class="dashboard-header">
+      <h1>Bienvenido a tu Panel</h1>
+      <p id="sessionInfo" class="subtext">Gestiona tus finanzas de forma sencilla y segura</p>
+    </header>
+
+    <section class="card info-card">
+      <h2>Información de sesión</h2>
+      <div id="successMessage" class="message">Sesión iniciada correctamente.</div>
+      <div id="serverInfo"></div>
+    </section>
+
+    <section class="card balance-card">
+      <div class="balance-wrapper">
+        <span class="balance-text">Tu saldo es:</span>
+        <span id="balance" class="balance-amount">Cargando...</span>
+      </div>
+    </section>
+
+    <section class="card link-card">
+      <h2>Transferencias rápidas</h2>
+      <a href="send.html" class="btn-link">Ir a Bizum</a>
+    </section>
+
+    <section class="card link-card">
+      <h2>Historial de Transacciónes</h2>
+      <a href="historytransactions.html" class="btn-link">Ver Historial</a>
+    </section>
+
+    <section class="card last-transaction-card">
+      <h2>Última Transacción</h2>
+      <div id="lastTransactionContent">
+        <p>Cargando última transacción...</p>
+      </div>
+    </section>
+
+    
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const xml = sessionStorage.getItem("responseXML");
+
+      if (xml) {
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xml, "text/xml");
+        const numError = xmlDoc.querySelector("num_error")?.textContent;
+        const userMessage = xmlDoc.querySelector("user_message")?.textContent || "Sesión iniciada correctamente.";
+
+        if (numError === "0") {
+          document.getElementById("successMessage").innerText = "✅ " + userMessage;
+          
+          const balance = xmlDoc.querySelector("balance")?.textContent || "No disponible"; 
+          document.getElementById("balance").innerText = /*"Tu saldo actual es: " +*/ balance;
+        }
+      }
+    });
+    
+
+
+
+  </script>
+</body>
+</html>

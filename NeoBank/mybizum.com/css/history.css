@@ -1,0 +1,70 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f9f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Título de la página */
+h1 {
+    color: #2d7d3e;
+    margin-top: 20px;
+}
+
+/* Estilo del botón Volver */
+.btn-volver {
+    background-color: #2d7d3e;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+.btn-volver:hover {
+    background-color: #4c9f62;
+}
+
+/* Tabla de transacciones */
+#transactionsTable {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#transactionsTable th, #transactionsTable td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+#transactionsTable th {
+    background-color: #2d7d3e;
+    color: white;
+}
+
+#transactionsTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Resaltar toda la fila si es el enviador o receptor */
+#transactionsTable tr.sender-you {
+    background-color: #ffcccc; /* Rojo claro para la fila del enviador */
+}
+
+#transactionsTable tr.receiver-you {
+    background-color: #b3f0b3; /* Verde claro para la fila del receptor */
+}
+
+/* Añadir un efecto visual al hacer hover en las filas */
+#transactionsTable tr:hover {
+    background-color: #e8f5e2;
+    cursor: pointer;
+}

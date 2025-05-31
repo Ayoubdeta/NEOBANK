@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuperar Contraseña</title>
+  <link rel="stylesheet" href="../css/recover.css">
+  <script src="../js/main.js" defer></script>
+  <script src="../js/clsAjax.js" defer></script>
+  <script src="../js/pwdcheck.js" defer></script>
+</head>
+<body>
+  <a href="../index.html" class="back-button">← Volver</a>
+
+  <main class="container">
+    <header class="header">
+      <img src="https://img.icons8.com/ios/452/key.png" alt="Cambiar Contraseña" class="icon">
+      <h1>Cambiar Contraseña</h1>
+    </header>
+
+    <section class="form-card">
+      <form method="GET">
+        <input type="hidden" name="action" value="changepass">
+
+        <div class="form-group">
+          <label for="old_password">Contraseña Actual</label>
+          <input type="password" id="old_password" name="password" required>
+        </div>
+
+        <div class="form-group">
+          <label for="new_password">Nueva Contraseña</label>
+          <input type="password" id="new_password" name="newpassword" required oninput="checkPasswordStrength()">
+          <div id="passwordStrengthResult" class="strength-result"></div>
+        </div>
+
+        <button type="submit" class="btn-change">Cambiar Contraseña</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
