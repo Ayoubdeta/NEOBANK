@@ -3,7 +3,8 @@
 **Trabajo final de M07 - Desarrollo de Aplicaciones Web (DAW)**  
 **NeoBank - Aplicación Web Full Stack con Sistema de Transferencias Basado en Blockchain**
 
-Este proyecto es una **aplicación web de banca digital (NeoBank)** desarrollada como parte del ciclo formativo de **Desarrollo de Aplicaciones Web (DAW)**. Su objetivo principal es simular el funcionamiento de una banca en línea moderna, con funcionalidades clave como **registro, login de usuarios y envío de dinero**, integrando tecnologías de desarrollo web, contenedores **Docker** y un sistema de **blockchain** para validar transferencias.
+Este proyecto es una **aplicación web de banca digital (NeoBank)** desarrollada como parte del ciclo formativo de **Desarrollo de Aplicaciones Web (DAW)**. Su objetivo principal es simular el funcionamiento de una banca en línea moderna, con funcionalidades clave como **registro, login de usuarios y envío de dinero**, integrando tecnologías de desarrollo web, contenedores **Docker** y un sistema de **blockchain** para validar transferencias.  
+Además, el backend ha sido estructurado de forma orientada a objetos, haciendo uso de **clases y principios de programación modular** para una mejor organización del código.
 
 ---
 
@@ -13,6 +14,7 @@ Este proyecto es una **aplicación web de banca digital (NeoBank)** desarrollada
 - Dashboard personal tras iniciar sesión, con distintas funcionalidades.
 - Sistema de transferencias entre usuarios, verificado mediante una **blockchain interna** que garantiza la integridad de cada transacción.
 - Cada transferencia válida genera un nuevo bloque, que se añade a la cadena de forma segura y verificable.
+- Backend estructurado con **clases y objetos** para una arquitectura más limpia, mantenible y escalable.
 
 ---
 
@@ -42,6 +44,18 @@ Este proyecto es una **aplicación web de banca digital (NeoBank)** desarrollada
   - Crear funciones de negocio
 - **XML** como formato de datos en ciertas respuestas, procesado por AJAX
 
+#### 🧱 Backend orientado a objetos
+
+El backend en PHP ha sido diseñado utilizando **clases** para encapsular la lógica de negocio y estructurar el código de manera limpia y reutilizable.  
+Ejemplos de clases implementadas:
+
+- `User`: gestión de usuarios (registro, login, consulta de saldo)
+- `Transaction`: validación y ejecución de transferencias
+- `Blockchain` y `Block`: implementación del sistema de cadena de bloques
+- `Database`: conexión y consultas a la base de datos
+
+Este enfoque permite separar responsabilidades, facilitar las pruebas y mejorar la mantenibilidad del proyecto.
+
 ---
 
 ## 🔐 Blockchain en Transferencias
@@ -66,6 +80,7 @@ Durante este proyecto he consolidado conocimientos y habilidades en:
 - Comunicación cliente-servidor mediante **AJAX** y **XML**
 - Diseño e implementación de lógica segura de transferencias mediante **blockchain**
 - Dominio de **SQL avanzado**, incluyendo procedimientos y funciones
+- Aplicación de principios de **programación orientada a objetos en PHP**
 
 ---
 
@@ -81,9 +96,8 @@ Durante este proyecto he consolidado conocimientos y habilidades en:
 Si quieres saber más sobre este proyecto o tienes alguna sugerencia, no dudes en contactarme:
 
 - 📬 Email: [ayoubajtirah@gmail.com](mailto:ayoubajtirah@gmail.com)
-- 💻 GitHub: [TuPerfil](https://github.com/Ayoubdeta) <!-- Reemplaza esto por tu URL de perfil si lo deseas -->
+- 💻 GitHub: [TuPerfil](https://github.com/Ayoubdeta)
 
 ---
 
 ¡Gracias por visitar el repositorio! ⭐
-
