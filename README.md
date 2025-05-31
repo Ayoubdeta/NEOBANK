@@ -3,7 +3,7 @@
 **Trabajo final de M07 - Desarrollo de Aplicaciones Web (DAW)**  
 **NeoBank - Aplicación Web Full Stack con Sistema de Transferencias Basado en Blockchain**
 
-Este proyecto es una **aplicación web de banca digital (NeoBank)** desarrollada como parte del ciclo formativo de **Desarrollo de Aplicaciones Web (DAW)**. Su objetivo principal es simular el funcionamiento de una banca en línea moderna, con funcionalidades clave como **registro, login de usuarios y envío de dinero**, integrando tecnologías de desarrollo web, contenedores **Docker** y un sistema de **blockchain** para validar transferencias.  
+Este trabjo final de DAW es una **aplicación web de banca digital (NeoBank)** desarrollada como parte del ciclo formativo de **Desarrollo de Aplicaciones Web (DAW)**. Su objetivo principal es simular el funcionamiento de una banca en línea moderna, con funcionalidades clave como **registro, login de usuarios y envío de dinero**, integrando tecnologías de desarrollo web, contenedores **Docker** y un sistema de **blockchain** para validar transferencias.  
 Además, el backend ha sido estructurado de forma orientada a objetos, haciendo uso de **clases y principios de programación modular** para una mejor organización del código.
 
 ---
