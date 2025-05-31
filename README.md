@@ -96,7 +96,8 @@ Durante este proyecto he consolidado conocimientos y habilidades en:
 Si quieres saber más sobre este proyecto o tienes alguna sugerencia, no dudes en contactarme:
 
 - 📬 Email: [ayoubajtirah@gmail.com](mailto:ayoubajtirah@gmail.com)
-- 💻 GitHub: [TuPerfil](https://github.com/Ayoubdeta)
+- 💻 GitHub: [Perfil Ayoub](https://github.com/Ayoubdeta)
+- Linkedin: [Ayoub Ajtirah](https://www.linkedin.com/in/ayoub-ajtirah-17a199314/)
 
 ---
 
