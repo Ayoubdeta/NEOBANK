@@ -1,4 +1,4 @@
-# 🏦 NEOBANK
+# 🏦 NEOBANK 💵
 
 **Trabajo final de M07 - Desarrollo de Aplicaciones Web (DAW)**  
 **NeoBank - Aplicación Web Full Stack con Sistema de Transferencias Basado en Blockchain**
