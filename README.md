@@ -97,7 +97,7 @@ Si quieres saber más sobre este proyecto o tienes alguna sugerencia, no dudes e
 
 - 📬 Email: [ayoubajtirah@gmail.com](mailto:ayoubajtirah@gmail.com)
 - 💻 GitHub: [Perfil Ayoub](https://github.com/Ayoubdeta)
-- Linkedin: [Ayoub Ajtirah](https://www.linkedin.com/in/ayoub-ajtirah-17a199314/)
+- 🟦Linkedin: [Ayoub Ajtirah](https://www.linkedin.com/in/ayoub-ajtirah-17a199314/)
 
 ---
 
