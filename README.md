@@ -47,12 +47,12 @@ Además, el backend ha sido estructurado de forma orientada a objetos, haciendo 
 #### 🧱 Backend orientado a objetos
 
 El backend en PHP ha sido diseñado utilizando **clases** para encapsular la lógica de negocio y estructurar el código de manera limpia y reutilizable.  
-Ejemplos de clases implementadas:
+Clases implementadas:
 
-- `User`: gestión de usuarios (registro, login, consulta de saldo)
+- `UserManager`: gestión de usuarios (registro, login, logout, validar cuanta, etc.)
 - `Transaction`: validación y ejecución de transferencias
 - `Blockchain` y `Block`: implementación del sistema de cadena de bloques
-- `Database`: conexión y consultas a la base de datos
+- `daoCommand, daoConnect y daoManager`: conexión y consultas a la base de datos
 
 Este enfoque permite separar responsabilidades, facilitar las pruebas y mejorar la mantenibilidad del proyecto.
 
