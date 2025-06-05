@@ -29,7 +29,7 @@ Además, el backend ha sido estructurado de forma orientada a objetos, haciendo 
   - Herramientas para conectarse al contenedor de SQL y realizar consultas
 
 - **Contenedor 2** (Base de datos SQL):
-  - Motor de base de datos relacional: **MySQL** o **MariaDB**
+  - Motor de base de datos relacional: **SQL SERVER**
 
 ### 🧑‍💻 Desarrollo
 
